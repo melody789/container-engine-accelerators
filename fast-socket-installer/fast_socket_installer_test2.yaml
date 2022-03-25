@@ -1,0 +1,13 @@
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nccl-test
+spec:
+  containers:
+  - name: nccl-test
+    image: gcr.io/melodyma-gke-dev/fastsocket-installer-test@sha256:6de96dc71b2a3e5c3caa4ef267f5966f78eae0fea4b78b935631276364d0f8cc
+    resources:
+      limits:
+        nvidia.com/gpu: 1
+  restartPolicy: OnFailure
