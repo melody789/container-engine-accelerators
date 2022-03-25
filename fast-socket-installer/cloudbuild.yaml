@@ -1,4 +1,0 @@
-steps:
-- name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/fast-socket-installer/fastsocket-installer-test', '.']
-images: ['gcr.io/fast-socket-installer/fastsocket-installer-test']
