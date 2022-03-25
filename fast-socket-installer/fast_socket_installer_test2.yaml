@@ -6,7 +6,7 @@ metadata:
 spec:
   containers:
   - name: nccl-test
-    image: gcr.io/melodyma-gke-dev/fastsocket-installer-test@sha256:6de96dc71b2a3e5c3caa4ef267f5966f78eae0fea4b78b935631276364d0f8cc
+    image: gcr.io/melodyma-gke-dev/fastsocket-installer-test@sha256:179405512ef2177ee5e6b3b120c762aa13eeec6b0d5721ef5db5ffbded322929
     resources:
       limits:
         nvidia.com/gpu: 1
