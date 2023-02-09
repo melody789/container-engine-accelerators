@@ -151,6 +151,9 @@ func (ngm *nvidiaGPUManager) ListPhysicalDevices() map[string]pluginapi.Device {
 }
 
 func (ngm *nvidiaGPUManager) ListHealthCriticalXid() []int {
+	xidConfig := os.Getenv("XID_CONFIG")
+	fmt.Println(xidConfig)
+	fmt.Println(ngm.gpuConfig.HealthCriticalXid)
 	return ngm.gpuConfig.HealthCriticalXid
 }
 
