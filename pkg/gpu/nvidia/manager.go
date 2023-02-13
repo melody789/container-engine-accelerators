@@ -27,6 +27,8 @@ import (
 	"strconv"
 	"sync"
 	"time"
+	"strings"
+	"strconv"
 
 	"github.com/NVIDIA/gpu-monitoring-tools/bindings/go/nvml"
 	"github.com/golang/glog"
