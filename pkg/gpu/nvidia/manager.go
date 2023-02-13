@@ -152,8 +152,19 @@ func (ngm *nvidiaGPUManager) ListPhysicalDevices() map[string]pluginapi.Device {
 
 func (ngm *nvidiaGPUManager) ListHealthCriticalXid() []int {
 	xidConfig := os.Getenv("XID_CONFIG")
-	fmt.Println(xidConfig)
-	fmt.Println(ngm.gpuConfig.HealthCriticalXid)
+	glog.Infof("log list health critical xid")
+	fmt.Println("hahahhaha xidConfig print %s", xidConfig)
+	fmt.Println("hahahahhahaha ngm.gpuConfig.HealthCriticlXid %v", ngm.gpuConfig.HealthCriticalXid)
+	strs := strings.Split(A, " ")
+        ary := make([]int, len(strs))
+        for i := range ary {
+	    ary[i], _ = strconv.Atoi(strs[i])
+	}
+	ngm.gpuConfig.HealthCriticalXid = ary
+	fmt.Println("hahahhaha after ary  print %v", ary)
+	glog.Infof("hahahhaha log after ary  print %v", ary)
+	fmt.Println("hahahahhahaha after ngm.gpuConfig.HealthCriticlXid %v", ngm.gpuConfig.HealthCriticalXid)
+	glog.Infof("hahahahhahaha log after ngm.gpuConfig.HealthCriticlXid %v", ngm.gpuConfig.HealthCriticalXid)
 	return ngm.gpuConfig.HealthCriticalXid
 }
 
