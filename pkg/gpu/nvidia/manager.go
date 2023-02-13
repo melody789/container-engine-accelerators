@@ -28,7 +28,6 @@ import (
 	"sync"
 	"time"
 	"strings"
-	"strconv"
 
 	"github.com/NVIDIA/gpu-monitoring-tools/bindings/go/nvml"
 	"github.com/golang/glog"
@@ -157,7 +156,7 @@ func (ngm *nvidiaGPUManager) ListHealthCriticalXid() []int {
 	glog.Infof("log list health critical xid")
 	fmt.Println("hahahhaha xidConfig print %s", xidConfig)
 	fmt.Println("hahahahhahaha ngm.gpuConfig.HealthCriticlXid %v", ngm.gpuConfig.HealthCriticalXid)
-	strs := strings.Split(A, " ")
+	strs := strings.Split(xidConfig, " ")
         ary := make([]int, len(strs))
         for i := range ary {
 	    ary[i], _ = strconv.Atoi(strs[i])
